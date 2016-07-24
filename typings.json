@@ -1,0 +1,14 @@
+{
+  "globalDevDependencies": {
+    "classnames": "registry:dt/classnames#0.0.0+20160316155526",
+    "react": "registry:dt/react#0.14.0+20160720060442",
+    "react-dom": "registry:dt/react-dom#0.14.0+20160412154040",
+    "react-redux": "registry:dt/react-redux#4.4.0+20160720003245",
+    "redux": "registry:dt/redux#3.5.2+20160703092728"
+  },
+  "globalDependencies": {
+    "lodash": "registry:dt/lodash#3.10.0+20160720001309",
+    "redux-actions": "registry:dt/redux-actions#0.8.0+20160521154116",
+    "require": "registry:dt/require#2.1.20+20160316155526"
+  }
+}
