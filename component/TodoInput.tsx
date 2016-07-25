@@ -4,10 +4,10 @@ import * as React from 'react'
 
 interface TodoInputProps {
   onSave: (text: string) => any
-  text?: string
   placeholder?: string
   editing?: boolean
   newTodo?: boolean
+  text?: string
 }
 
 interface TodoInputState {

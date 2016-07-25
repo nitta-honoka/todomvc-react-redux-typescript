@@ -5,12 +5,12 @@ const { assign } = require('lodash')
 import { Todo } from '../model'
 
 import {
-  ADD_TODO,
-  DELETE_TODO,
-  EDIT_TODO,
+  CLEAR_COMPLETED,
   COMPLETE_TODO,
   COMPLETE_ALL,
-  CLEAR_COMPLETED
+  DELETE_TODO,
+  EDIT_TODO,
+  ADD_TODO
 } from '../constant/action-types'
 
 export const addTodo = createAction<Todo>(

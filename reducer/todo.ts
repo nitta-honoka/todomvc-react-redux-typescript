@@ -2,14 +2,15 @@
 import { handleActions, Action } from 'redux-actions'
 const { assign } = require('lodash')
 
-import { Todo, Todos, Payload } from '../model'
+import { Todos, Payload } from '../model'
+
 import {
-  ADD_TODO,
-  DELETE_TODO,
-  EDIT_TODO,
+  CLEAR_COMPLETED,
   COMPLETE_TODO,
   COMPLETE_ALL,
-  CLEAR_COMPLETED
+  DELETE_TODO,
+  EDIT_TODO,
+  ADD_TODO
 } from '../constant/action-types'
 
 const initState: Todos = [{

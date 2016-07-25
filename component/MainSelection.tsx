@@ -7,36 +7,32 @@ import * as React from 'react'
 import { Todo } from '../model'
 
 import {
+  SHOW_COMPLETED,
   SHOW_ACTIVE,
-  SHOW_ALL,
-  SHOW_COMPLETED
+  SHOW_ALL
 } from '../constant/todo-filters'
-import {editTodo} from '../action/index';
-import {deleteTodo} from '../action/index';
 
 const TODO_FILTERS = {
-  [SHOW_ALL]: () => true,
+  [SHOW_COMPLETED]: (todo: Todo) => todo.completed,
   [SHOW_ACTIVE]: (todo: Todo) => !todo.completed,
-  [SHOW_COMPLETED]: (todo: Todo) => todo.completed
+  [SHOW_ALL]: () => true
 }
 
 interface MainSelectionProps {
-  todos: Todo[]
-  clearCompleted: () => void
-  completeAll: () => void
   editTodo: (todo: Todo, text: string) => void
   completeTodo: (todo: Todo) => void
   deleteTodo: (todo: Todo) => void
+  clearCompleted: () => void
+  completeAll: () => void
+  todos: Todo[]
 }
 interface MainSelectionState {
   filter: string
 }
 
 class MainSelection extends React.Component<MainSelectionProps, MainSelectionState> {
-  constructor(props) {
-    super(props)
-
-    this.state = {filter: SHOW_ALL}
+  state = {
+    filter: SHOW_ALL
   }
 
   handleClearCompleted() {

@@ -9,17 +9,17 @@ import {
 } from '../constant/todo-filters'
 
 const FILTER_TITLES = {
-  [SHOW_ALL]: 'All',
+  [SHOW_COMPLETED]: 'Completed',
   [SHOW_ACTIVE]: 'Active',
-  [SHOW_COMPLETED]: 'Completed'
+  [SHOW_ALL]: 'All',
 }
 
 interface FooterProps {
+  onShow: (filter: string) => void
+  onClearCompleted: () => void
   completedCount: number
   activeCount: number
   filter: string
-  onClearCompleted: () => void
-  onShow: (filter: string) => void
 }
 
 class Footer extends React.Component<FooterProps, {}> {

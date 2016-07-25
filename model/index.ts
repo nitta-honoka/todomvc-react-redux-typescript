@@ -7,7 +7,7 @@ export type Todo = {
 
 export type Todos = Todo[]
 
-export interface Payload {
+export type Payload = {
   id: number,
   text: string
 }

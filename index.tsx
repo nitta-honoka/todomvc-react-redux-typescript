@@ -1,16 +1,15 @@
 
 import 'todomvc-app-css/index.css'
 
-import * as React from 'react'
-import { render } from 'react-dom'
-import { Provider } from 'react-redux'
 import { createStore, Store } from 'redux'
+import { Provider } from 'react-redux'
+import { render } from 'react-dom'
+import * as React from 'react'
 
-import App from './component/App'
 import rootReducer from './reducer'
+import App from './component/App'
 
-const initState = {}
-const store: Store<any> = createStore(rootReducer, initState)
+const store: Store<any> = createStore(rootReducer, {})
 
 render(
   <Provider store={store}>

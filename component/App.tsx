@@ -2,25 +2,24 @@
 import MainSelection from './MainSelection'
 import Header from './Header'
 
-import * as React from 'react'
-
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
+import * as React from 'react'
 
 import {
-  addTodo,
-  editTodo,
-  deleteTodo,
-  completeAll,
+  clearCompleted,
   completeTodo,
-  clearCompleted
+  completeAll,
+  deleteTodo,
+  editTodo,
+  addTodo
 } from '../action'
 
 import { Todo } from '../model'
 
 interface AppProps {
-  todo: Todo[]
   dispatch: Dispatch<any>
+  todo: Todo[]
 }
 
 class App extends React.Component<AppProps, {}> {

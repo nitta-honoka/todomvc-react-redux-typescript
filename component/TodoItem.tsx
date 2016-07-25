@@ -7,10 +7,10 @@ import * as React from 'react'
 import { Todo } from '../model'
 
 interface TodoItemProps {
-  todo: Todo
   editTodo: (todo: Todo, text: string) => void
-  deleteTodo: (todo: Todo) => void
   completeTodo: (todo: Todo) => void
+  deleteTodo: (todo: Todo) => void
+  todo: Todo
   key?: any
 }
 interface TodoItemState {
@@ -18,10 +18,8 @@ interface TodoItemState {
 }
 
 class TodoItem extends React.Component<TodoItemProps, TodoItemState> {
-  constructor(props) {
-    super(props)
-
-    this.state = {editing: false}
+  state = {
+    editing: false
   }
 
   handleSave(todo: Todo, text: string) {
